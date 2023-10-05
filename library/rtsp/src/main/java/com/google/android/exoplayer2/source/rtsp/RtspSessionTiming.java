@@ -44,7 +44,7 @@ import java.util.regex.Pattern;
   // We only support npt=xxx-[xxx], but not npt=-xxx. See RFC2326 Section 3.6.
   // Supports both npt= and npt: identifier.
   private static final Pattern NPT_RANGE_PATTERN =
-      Pattern.compile("npt[:=]([.\\d]+|now)\\s?-\\s?([.\\d]+)?");
+      Pattern.compile("npt[:=]([.\dA-Z]+|now)\s?-\s?([.\d]+)?");
   private static final String START_TIMING_NTP_FORMAT = "npt=%.3f-";
 
   private static final long LIVE_START_TIME = 0;
